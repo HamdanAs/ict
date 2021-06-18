@@ -1,5 +1,5 @@
 :root {
-  font-family: "Montserrat";
+  font-family: "Montserrat", serif;
   --bg-color: #001640;
   --white-color: #e5e5e5;
   --orange-color: #fe766a;
@@ -21,6 +21,7 @@ nav {
   position: fixed;
   left: 0;
   right: 0;
+  z-index: 1000000;
 }
 
 ul {
@@ -43,11 +44,11 @@ a {
   justify-content: space-evenly;
 }
 
-.store {
+/* .store {
   background-color: var(--orange-color);
   padding: 0.3em 0.8em;
   border-radius: 1em;
-}
+} */
 
 /* main */
 main {
@@ -55,10 +56,6 @@ main {
 }
 
 /* section */
-section {
-  width: 100%;
-  height: 100vh;
-}
 
 /* landing */
 .landing {
@@ -112,6 +109,8 @@ section {
   border-radius: 4em;
   display: grid;
   grid-template-rows: 1fr 10%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-title {
@@ -136,6 +135,84 @@ section {
   height: 5px;
   background-color: var(--white-color);
   margin: 0 auto;
+}
+
+.expert{
+  height: 100vh;
+}
+
+.expert-title{
+  margin-top: 3em;
+  color: white;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expert-title::after{
+  content: "";
+  display: inline-block;
+  margin-left: 15px;
+  width: 15%;
+  height: 5px;
+  background-color: var(--white-color);
+}
+
+.card-group{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card{
+  width: 400px;
+  height: 520px;
+  border-radius: 28px;
+  background: var(--bg-secondary);
+  margin: 15px;
+  position: relative;
+}
+
+.card-img{
+  height: 50%;
+}
+
+.card-img img{
+  height: 100%;
+}
+
+.card-title{
+  font-size: 2rem;
+  color: var(--white-color);
+}
+
+.card-text{
+  font-size: 1.7rem;
+  margin-top: 1em;
+  padding: 0 25px;
+  text-align: left;
+  color: var(--white-color);
+  font-weight: 100;
+}
+
+.card-text b{
+  font-weight: 500;
+}
+
+.btn{
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  background-color: var(--orange-color);
+  margin-top: 24px;
+  border-radius: 41px;
+}
+
+.card .btn{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .right {
@@ -184,6 +261,128 @@ strong {
 
 .bg-main {
   background-color: var(--bg-color);
+}
+
+.masterpiece{
+  margin-top: 100px;
+}
+
+.masterpiece .list{
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.masterpiece .list ul{
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.masterpiece .list h3{
+  font-size: 1.8rem;
+}
+
+.masterpiece .list .btn{
+  margin: 0;
+  background-color: var(--bg-secondary);
+}
+
+.masterpiece .masterpiece-container{
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  height: 100vh;
+}
+
+.masterpiece .masterpiece-container .box{
+  background-color: var(--orange-color);
+}
+
+.colaborate{ 
+  margin:100px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white-color);
+  background-color: var(--bg-secondary);
+  padding: 3em calc(10% + 1em);
+}
+
+.colaborate .btn{
+  margin: 0;
+}
+
+.store{
+  margin-bottom: 100px;
+}
+
+.store .head{
+  display: flex;
+  justify-content: space-around;
+  color: var(--white-color);
+}
+
+.store .head .btn{
+  margin: 0;
+}
+
+.store .products{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  height: 100vh;
+  margin-top: 50px;
+}
+
+.store .products .box{
+  background-color: var(--orange-color);
+}
+
+.footer{
+  margin: 50px 0;
+  color: white;
+}
+
+.footer .one {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  border-top: 3px solid var(--white-color);
+  border-bottom: 3px solid var(--white-color);
+  padding: 20px 0;
+}
+
+.footer .one .list{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .one .list h2{
+  margin-bottom: 20px;
+}
+
+.footer .one .list:first-child{
+  grid-column: 2/3;
+}
+
+.footer .two {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer .two .right{
+  width: 50%;
+  margin: 0;
+}
+
+.footer .three{
+  margin: 100px 0;
 }
 
 /* animation */
